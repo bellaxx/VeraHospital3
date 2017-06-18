@@ -10,7 +10,7 @@ import java.util.List;
 
 
 import businesslogic.UserManager;
-import data.User;
+import data.UserArzt;
 import data.UserDAO;
 
 public class H2UserDAO implements UserDAO {

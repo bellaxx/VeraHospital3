@@ -19,9 +19,64 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+ 	<servlet>
+ 		<description>
+ 		</description>
+ 		<display-name>Login</display-name>
+ 		<servlet-name>Login</servlet-name>
+ 		<servlet-class>praesentation.Login</servlet-class>
+ 	</servlet>
+ 	<servlet>
+ 		<description>
+ 		</description>
+ 		<display-name>Registrierung</display-name>
+ 		<servlet-name>Registrierung</servlet-name>
+ 		<servlet-class>praesentation.Registrierung</servlet-class>
+ 	</servlet>
+ 	<servlet>
+ 		<description>
+ 		</description>
+ 		<display-name>Aerzte</display-name>
+ 		<servlet-name>Aerzte</servlet-name>
+ 		<servlet-class>praesentation.Aerzte</servlet-class>
+ 	</servlet>
+ 	<servlet>
+ 		<description>
+ 		</description>
+ 		<display-name>UpdatePatienten</display-name>
+ 		<servlet-name>UpdatePatienten</servlet-name>
+ 		<servlet-class>praesentation.UpdatePatienten</servlet-class>
+ 	</servlet>
+ 	<servlet>
+ 		<description>
+ 		</description>
+ 		<display-name>newPatient</display-name>
+ 		<servlet-name>newPatient</servlet-name>
+ 		<servlet-class>praesentation.newPatient</servlet-class>
+ 	</servlet>
 	<servlet-mapping>
 		<servlet-name>H2Console</servlet-name>
 		<url-pattern>/console/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Registrierung</servlet-name>
+		<url-pattern>/Registrierung</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Aerzte</servlet-name>
+		<url-pattern>/Aerzte</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdatePatienten</servlet-name>
+		<url-pattern>/UpdatePatienten</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>newPatient</servlet-name>
+		<url-pattern>/newPatient</url-pattern>
 	</servlet-mapping>
 
 	
