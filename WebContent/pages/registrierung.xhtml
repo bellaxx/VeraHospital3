@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:f="http://java.sun.com/jsf/core"
+ xmlns:h="http://java.sun.com/jsf/html">
+
+ <h:head>
+        <title></title>
+    </h:head>
+    <h:body>
+        <h3>Bitte registrieren Sie sich </h3>
+        <h:form id="login-form">
+         <h:outputText value="Name:"/>
+           <h:inputText value="" id="name"/>
+           <br/>
+            <h:outputText value="Fachgebiet:"/>
+           <h:inputText value="" id="fachgebiet"/>
+           <br/>
+           <h:outputText value="Büro:"/>
+           <h:inputText value="" id="buero"/>
+           <br/>
+            <h:outputText value="Email:"/>
+           <h:inputText value="" id="email"/>
+           <br/>
+           <h:outputText value="Passwort:"/>
+           <h:inputSecret value="" id="password"/>
+           <br/>
+           <h:commandButton id="button" value="Registrieren" action=""/>
+           <br/>
+           <div>Sind Sie schon registriert?</div>
+           <h:commandLink action="" value="Login"/>
+           <br/>
+           
+        </h:form>
+    </h:body>
+</html>
+- See more at: http://www.itcuties.com/j2ee/jsf-2-login-filter-example/#sthash.C3rnImKR.dpuf
