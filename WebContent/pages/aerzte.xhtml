@@ -9,16 +9,27 @@
     </h:head>
     <h:body>
         <h3>Übersicht aller Ärzte </h3>
-	<table>
-    <tr>
-        <th>Personalnummer</th>
-        <th>Name</th>
-        <th>Fachgebiet</th>
-        <th>Büro</th>
-        <th>Email</th>
-    </tr>
-    
-</table>
+	<h:dataTable var="arzt" value="#{AerzteBean.arztListe}">
+    	<h:column>
+	    	<h:outputText value="#{arzt.personalnummer}"/>
+	    </h:column>
+	    
+    	<h:column>
+	    	<h:outputText value="#{arzt.name}"/>
+	    </h:column>
+	    
+    	<h:column>
+	    	<h:outputText value="#{arzt.fachgebiet}"/>
+	    </h:column>
+	    
+    	<h:column>
+	    	<h:outputText value="#{arzt.buero}"/>
+	    </h:column>
+	    
+    	<h:column>
+	    	<h:outputText value="#{arzt.email}"/>
+	    </h:column>
+	</h:dataTable>
 
 </h:body>
 </html>
