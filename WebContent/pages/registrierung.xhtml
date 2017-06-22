@@ -11,24 +11,24 @@
         <h3>Bitte registrieren Sie sich </h3>
         <h:form id="login-form">
          <h:outputText value="Name:"/>
-           <h:inputText value="" id="name"/>
+           <h:inputText value="#{RegistrierungBean.name}" id="name"/>
            <br/>
             <h:outputText value="Fachgebiet:"/>
-           <h:inputText value="" id="fachgebiet"/>
+           <h:inputText value="#{RegistrierungBean.fachgebiet}" id="fachgebiet"/>
            <br/>
            <h:outputText value="Büro:"/>
-           <h:inputText value="" id="buero"/>
+           <h:inputText value="#{RegistrierungBean.buero}" id="buero"/>
            <br/>
             <h:outputText value="Email:"/>
-           <h:inputText value="" id="email"/>
+           <h:inputText value="#{RegistrierungBean.email}" id="email"/>
            <br/>
            <h:outputText value="Passwort:"/>
-           <h:inputSecret value="" id="password"/>
+           <h:inputSecret value="#{RegistrierungBean.passwort" id="password"/>
            <br/>
-           <h:commandButton id="button" value="Registrieren" action=""/>
+           <h:commandButton id="button" value="Registrieren" action="#{RegistrierungBean.registrieren"/>
            <br/>
            <div>Sind Sie schon registriert?</div>
-           <h:commandLink action="" value="Login"/>
+           <h:commandLink action="#{RegistrierungBean.login}" value="Login"/>
            <br/>
            
         </h:form>
