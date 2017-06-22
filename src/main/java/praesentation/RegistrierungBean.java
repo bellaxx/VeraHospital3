@@ -4,7 +4,8 @@ import javax.faces.bean.ManagedBean;
 
 import businesslogic.PatientenManager;
 
-@ManagedBean
+@ManagedBean(name="registrierungBean")
+@SessionScoped
 public class RegistrierungBean {
 	String name;
 	String fachgebiet;

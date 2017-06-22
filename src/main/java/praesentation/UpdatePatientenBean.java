@@ -6,7 +6,8 @@ import javax.faces.bean.ManagedBean;
 
 import businesslogic.PatientenManager;
 
-@ManagedBean
+@ManagedBean(name="updatePatientenBean")
+@SessionScoped
 public class UpdatePatientenBean implements Serializable{
 	private String neueDiagnose;
 	

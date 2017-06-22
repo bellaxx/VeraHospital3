@@ -5,10 +5,8 @@ import javax.faces.bean.ManagedBean;
 import businesslogic.PatientenManager;
 import data.UserPatient;
 
-/**
- * Servlet implementation class NeuerPatientBean
- */
-@ManagedBean
+@ManagedBean(name="neuerPatientBean")
+@SessionScoped
 public class NeuerPatientBean {
 	private UserPatient patient = new UserPatient();
 	

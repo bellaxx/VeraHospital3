@@ -8,7 +8,8 @@ import javax.faces.bean.ManagedBean;
 import data.UserPatient;
 import businesslogic.PatientenManager;
 
-@ManagedBean
+@ManagedBean(name="meinePatientenBean")
+@SessionScoped
 public class MeinePatientenBean implements Serializable{
 	
 	// in der business Logic werden alle User in einer Liste zurückgegeben

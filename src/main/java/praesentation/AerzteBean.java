@@ -1,17 +1,12 @@
 package praesentation;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import javax.faces.bean.ManagedBean;
 
 import businesslogic.PatientenManager;
 import data.UserArzt;
 
-/**
- * Servlet implementation class AerzteBean
- */
-@ManagedBean
+@ManagedBean(name="aerzteBean")
+@SessionScoped
 public class AerzteBean {
 	
 	private List<UserArzt> arztListe = PatientenManager.getAerzte();
