@@ -1,10 +1,6 @@
 package praesentation;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.faces.bean.ManagedBean;
 
 import businesslogic.UserManager;
 import data.UserPatient;
@@ -12,6 +8,7 @@ import data.UserPatient;
 /**
  * Servlet implementation class NeuerPatientBean
  */
+@ManagedBean
 public class NeuerPatientBean {
 	private UserPatient patient = new UserPatient();
 	

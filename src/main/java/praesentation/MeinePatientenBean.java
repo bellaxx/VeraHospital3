@@ -3,10 +3,12 @@ package praesentation;
 import java.util.List;
 import java.io.Serializable;
 import java.util.ArrayList;
+import javax.faces.bean.ManagedBean;
 
 import data.UserPatient;
 import businesslogic.UserManager;
 
+@ManagedBean
 public class MeinePatientenBean implements Serializable{
 	
 	// in der business Logic werden alle User in einer Liste zurückgegeben

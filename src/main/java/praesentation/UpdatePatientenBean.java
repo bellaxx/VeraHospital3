@@ -3,7 +3,9 @@ package praesentation;
 import java.io.Serializable;
 import businesslogic.UserManager;
 import data.UserPatient;
+import javax.faces.bean.ManagedBean;
 
+@ManagedBean
 public class UpdatePatientenBean implements Serializable{
 	private String neueDiagnose;
 	
