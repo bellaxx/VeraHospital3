@@ -6,13 +6,13 @@ import java.util.ArrayList;
 import javax.faces.bean.ManagedBean;
 
 import data.UserPatient;
-import businesslogic.UserManager;
+import businesslogic.PatientenManager;
 
 @ManagedBean
 public class MeinePatientenBean implements Serializable{
 	
 	// in der business Logic werden alle User in einer Liste zurückgegeben
-	private List<UserPatient> patientenListe = UserManager.getPatientenListe();
+	private List<UserPatient> patientenListe = PatientenManager.getPatientenListe();
 	
 	public List<UserPatient> getPatienten(){
 		// über diese Liste kann auf das Transferobjekt UserPatient zugegriffen werden
@@ -33,7 +33,7 @@ public class MeinePatientenBean implements Serializable{
 	
 	public String loeschen(int id){
 		// in der Businesslogic löschen
-		UserManager.deletePatient(id);
+		PatientenManager.deletePatient(id);
 		// Weiterleiten auf die richtige Seite
 		return "meinePatienten.xhtml";
 	}

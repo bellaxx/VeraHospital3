@@ -1,7 +1,8 @@
 package praesentation;
 
 import javax.faces.bean.ManagedBean;
-import businesslogic.UserManager;
+
+import businesslogic.PatientenManager;
 
 @ManagedBean
 public class RegistrierungBean {
@@ -52,7 +53,7 @@ public class RegistrierungBean {
 	}
 	
 	public String registrieren(){
-		UserManager.addArzt(this.name, this.fachgebiet, this.buero, this.email, this.passwort);
+		PatientenManager.addArzt(this.name, this.fachgebiet, this.buero, this.email, this.passwort);
 		return "meinePatienten.xhtml";
 	}
 	

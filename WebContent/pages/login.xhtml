@@ -11,15 +11,15 @@
         <h3>Bitte loggen Sie sich ein</h3>
         <h:form id="login-form">
            <h:outputText value="Email:"/>
-           <h:inputText value="" id="email"/>
+           <h:inputText value="#{LoginBean.email}" id="email"/>
            <br/>
            <h:outputText value="Passwort:"/>
-           <h:inputSecret value="" id="password"/>
+           <h:inputSecret value="#{LoginBean.passwort}" id="password"/>
            <br/>
-           <h:commandButton id="button" value="Login" action=""/>
+           <h:commandButton id="button" value="Login" action="#{LoginBean.login}"/>
            <br/>
            <div>Noch nicht registriert?</div>
-           <h:commandLink action="" value="Registrieren"/>
+           <h:commandLink action="#{LoginBean.registrieren}" value="Registrieren"/>
            <br/>
            
         </h:form>

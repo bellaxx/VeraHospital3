@@ -1,9 +1,10 @@
 package praesentation;
 
 import java.io.Serializable;
-import businesslogic.UserManager;
 import data.UserPatient;
 import javax.faces.bean.ManagedBean;
+
+import businesslogic.PatientenManager;
 
 @ManagedBean
 public class UpdatePatientenBean implements Serializable{
@@ -18,11 +19,11 @@ public class UpdatePatientenBean implements Serializable{
 	}
 	
 	public String getPatientenInfo(int id){
-		UserPatient patient = UserManager.findUserById(id);
+		UserPatient patient = PatientenManager.findUserById(id);
 		return ("Name: " + patient.name + ", Geburtsdatum: " + patient.geburtsdatum + ", bisherige Diagnose: " + patient.diagnose);
 	}
 	
 	public void updatePatient(int id){
-		UserManager.updatePatient(id, neueDiagnose);
+		PatientenManager.updatePatient(id, neueDiagnose);
 	}
 }

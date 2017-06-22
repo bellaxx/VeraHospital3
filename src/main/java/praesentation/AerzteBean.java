@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 
-import businesslogic.UserManager;
+import businesslogic.PatientenManager;
 import data.UserArzt;
 
 /**
@@ -14,7 +14,7 @@ import data.UserArzt;
 @ManagedBean
 public class AerzteBean {
 	
-	private List<UserArzt> arztListe = UserManager.getAerzte();
+	private List<UserArzt> arztListe = PatientenManager.getAerzte();
 	
 	public List<UserArzt> getAerzte(){
 		return arztListe;

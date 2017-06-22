@@ -2,7 +2,7 @@ package praesentation;
 
 import javax.faces.bean.ManagedBean;
 
-import businesslogic.UserManager;
+import businesslogic.PatientenManager;
 import data.UserPatient;
 
 /**
@@ -22,7 +22,7 @@ public class NeuerPatientBean {
 	
 	public String save(){
 		// neuen Patienten erstellen
-		UserManager.addPatient(patient);
+		PatientenManager.addPatient(patient);
 		// zurück zur Übersicht
 		return "meinePatienten.xhtml";
 	}
