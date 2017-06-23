@@ -8,30 +8,32 @@
         <title></title>
     </h:head>
     <h:body>
+    
+    	
+    
         <h3>Bitte registrieren Sie sich </h3>
         <h:form id="login-form">
          <h:outputText value="Name:"/>
-           <h:inputText value="" id="name"/>
+           <h:inputText value="#{registrierungBean.name}" id="name"/>
            <br/>
             <h:outputText value="Fachgebiet:"/>
-           <h:inputText value="" id="fachgebiet"/>
+           <h:inputText value="#{registrierungBean.fachgebiet}" id="fachgebiet"/>
            <br/>
            <h:outputText value="Büro:"/>
-           <h:inputText value="" id="buero"/>
+           <h:inputText value="#{registrierungBean.buero}" id="buero"/>
            <br/>
             <h:outputText value="Email:"/>
-           <h:inputText value="" id="email"/>
+           <h:inputText value="#{registrierungBean.email}" id="email"/>
            <br/>
            <h:outputText value="Passwort:"/>
-           <h:inputSecret value="" id="password"/>
+           <h:inputSecret value="#{registrierungBean.passwort}" id="password"/>
            <br/>
-           <h:commandButton id="button" value="Registrieren" action=""/>
+           <h:commandButton id="button" value="Registrieren" action="#{registrierungBean.registrieren}"/>
            <br/>
            <div>Sind Sie schon registriert?</div>
-           <h:commandLink action="" value="Login"/>
+           <h:commandLink action="#{registrierungBean.login}" value="Login"/>
            <br/>
            
         </h:form>
     </h:body>
 </html>
-- See more at: http://www.itcuties.com/j2ee/jsf-2-login-filter-example/#sthash.C3rnImKR.dpuf

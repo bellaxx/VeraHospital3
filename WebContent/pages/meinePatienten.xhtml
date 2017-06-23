@@ -8,17 +8,39 @@
         <title></title>
     </h:head>
     <h:body>
-        <h3>Übersicht meiner Patienten </h3>
-	<table>
-    <tr>
-        <th>Patientennummer</th>
-        <th>Name</th>
-        <th>Geburtsdatum</th>
-        <th>Diagnose</th>
-        <th>Arzt</th>
-    </tr>
     
-</table>
-
+    	<!-- <h:include src="navigation.xhtml" />-->
+    
+        <h3>Übersicht meiner Patienten</h3>
+        
+    <h:dataTable var="patient" value="#{MeinePatientenBean.patientenListe}">
+    	<h:column>
+	    	<h:outputText value="#{patient.id}"/>
+	    </h:column>
+	    
+    	<h:column>
+	    	<h:outputText value="#{patient.name}"/>
+	    </h:column>
+	    
+    	<h:column>
+	    	<h:outputText value="#{patient.geburtsdatum}"/>
+	    </h:column>
+	    
+    	<h:column>
+	    	<h:outputText value="#{patient.diagnose}"/>
+	    </h:column>
+	    
+    	<h:column>
+	    	<h:outputText value="#{patient.arzt}"/>
+	    </h:column>
+	    
+	    <h:column>
+	    	<h:commandLink action="#{meinePatientenBean.bearbeiten}" value="Diagnose bearbeiten"/>
+	    </h:column>
+	    
+	    <h:column>
+	    	<h:commandLink action="#{meinePatientenBean.loeschen(patient.id)}" value="Patient löschen"/>
+	    </h:column>
+	</h:dataTable>
 </h:body>
 </html>

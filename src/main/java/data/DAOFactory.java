@@ -12,8 +12,8 @@ public abstract class DAOFactory {
 	// There will be a method for each DAO that can be
 	// created. The concrete factories will have to
 	// implement these methods.
-	public abstract UserDAO getUserDAO();
-	public abstract ExampleDAO getExampleDAO1();
+	public abstract ArztDAO getArztDAO();
+	public abstract PatientenDAO getPatientenDAO();
 	public static DAOFactory getDAOFactory(Backend whichFactory) {
 		switch (whichFactory) {
 		case H2:
@@ -22,9 +22,6 @@ public abstract class DAOFactory {
 			return null;
 		}
 	}
-
-	public ExampleDAO getExampleDAO() {
-		// TODO Auto-generated method stub
-		return null;
 	}
-}
+
+	

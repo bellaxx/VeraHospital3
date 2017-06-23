@@ -8,12 +8,17 @@ CREATE TABLE AERZTE(
 	Buero VARCHAR(40) NOT NULL,
 	Email VARCHAR(255) NOT NULL,
 	Passwort VARCHAR(255) NOT NULL
-);
+)
 CREATE TABLE PATIENTEN(
 	PatientenId INTEGER PRIMARY KEY AUTO_INCREMENT,
 	Name VARCHAR(40) NOT NULL,
 	Geburtsdatum VARCHAR(40) NOT NULL,
 	Diagnose VARCHAR(40) NOT NULL,
-	FOREIGN KEY (Behandelnder Arzt)
-           REFERENCES aerzte(Personalnummer)
-);
+	Behandelnderarzt INTEGER NOT NULL
+)
+
+ALTER TABLE PATIENTEN
+ADD FOREIGN KEY (Behandelnderarzt) REFERENCES Aerzte(Personalnummer)
+
+SELECT * FROM AERZTE
+SELECT * FROM Patienten

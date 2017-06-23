@@ -8,23 +8,28 @@
         <title></title>
     </h:head>
     <h:body>
+    
+    	<!-- <h:include src="navigation.xhtml" />-->
         
 		<h3>Geben Sie die Daten des neuen Patienten ein </h3>
         <h:form id="newPatient">
          <h:outputText value="Name:"/>
-           <h:inputText value="" id="name"/>
-           <br/>
-            <h:outputText value="Geburtsdatum:"/>
-           <h:inputText value="" id="geburtsdatum"/>
-           <br/>
-           <h:outputText value="Diagnose:"/>
-           <h:inputText value="" id="diagnose"/>
-           <br/>
-            <h:outputText value="Behandelnder Arzt:"/>
-           <h:inputText value="" id="arzt"/>
+           <h:inputText value="#{NeuerPatientBean.patient.name}" id="name"/>
            <br/>
            
-           <h:commandButton id="button" value="Speichern" action=""/>
+            <h:outputText value="Geburtsdatum:"/>
+           <h:inputText value="#{NeuerPatientBean.patient.geburtsdatum}" id="geburtsdatum"/>
+           <br/>
+           
+           <h:outputText value="Diagnose:"/>
+           <h:inputText value="#{NeuerPatientBean.patient.diagnose}" id="diagnose"/>
+           <br/>
+           
+            <h:outputText value="Behandelnder Arzt:"/>
+           <h:inputText value="#{NeuerPatientBean.patient.arzt}" id="arzt"/>
+           <br/>
+           
+           <h:commandButton id="button" value="Speichern" action="#{NeuerPatientBean.save}"/>
            <br/>
            
            

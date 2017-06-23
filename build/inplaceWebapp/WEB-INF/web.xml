@@ -3,8 +3,8 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
-	id="HelloDataSource" version="3.0">
-	<display-name>"UserList"</display-name>
+	id="helloJSF" version="3.0">
+	<display-name>"VeraHospital"</display-name>
 
  	<servlet>
 		<servlet-name>H2Console</servlet-name>
@@ -25,39 +25,30 @@
 	</servlet-mapping>
 
 	<servlet>
-	    <servlet-name>Test</servlet-name>
-	    <jsp-file>/Test.jsp</jsp-file>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>org.apache.myfaces.webapp.MyFacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
-		<servlet-mapping>
-	    <servlet-name>Test</servlet-name>
-	    <url-pattern>/Test</url-pattern>
-	</servlet-mapping>
 
-    <servlet>
-	    <servlet-name>Detailansicht</servlet-name>
-	    <jsp-file>/Detailansicht.jsp</jsp-file>
-	</servlet>
-		<servlet-mapping>
-	    <servlet-name>Detailansicht</servlet-name>
-	    <url-pattern>/Detailansicht</url-pattern>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>/faces/*</url-pattern>
+		
 	</servlet-mapping>
-	<servlet>
-	    <servlet-name>Authentifizierung</servlet-name>
-	    <jsp-file>/Authentifizierung.jsp</jsp-file>
-	</servlet>
-		<servlet-mapping>
-	    <servlet-name>Authentifizierung</servlet-name>
-	    <url-pattern>/Authentifizierung</url-pattern>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
-	<servlet>
-	    <servlet-name>Navigation</servlet-name>
-	    <jsp-file>/Navigation.jsp</jsp-file>
-	</servlet>
-		<servlet-mapping>
-	    <servlet-name>Navigation</servlet-name>
-	    <url-pattern>/Navigation</url-pattern>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
+	<listener>
+	     <listener-class>org.apache.myfaces.webapp.StartupServletContextListener</listener-class>
+	 </listener>
+	
 	<welcome-file-list>
+		
 		<welcome-file>index.html</welcome-file>
 		<welcome-file>index.htm</welcome-file>
 		<welcome-file>index.jsp</welcome-file>
@@ -67,7 +58,11 @@
 	</welcome-file-list>
 	<context-param>
 		<param-name>db.url</param-name>
-		<param-value>jdbc:h2:./build/WebEng04DB</param-value>
+		<param-value>jdbc:h2:./build/WebEng07DB</param-value>
+	</context-param>
+	<context-param>
+		<param-name>test</param-name>
+		<param-value>123</param-value>
 	</context-param>
 	<context-param>
 		<param-name>db.user</param-name>
@@ -84,4 +79,5 @@
 	<listener>
 	    <listener-class>org.h2.server.web.DbStarter</listener-class>
 	</listener>
+	
 </web-app>

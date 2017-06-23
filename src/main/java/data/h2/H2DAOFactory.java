@@ -4,9 +4,11 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import data.ArztDAO;
 import data.DAOFactory;
-import data.ExampleDAO;
-import data.UserDAO;
+
+import data.PatientenDAO;
+
 
 
 
@@ -14,7 +16,7 @@ import data.UserDAO;
 public class H2DAOFactory extends DAOFactory {
 	
 	private static final String DBDRIVER = "org.h2.Driver";
-	private static final String DBURL = "jdbc:h2:./build/WebEng04DB";
+	private static final String DBURL = "jdbc:h2:./build/VeraHospital";
 	private static final String DBUSER = "sa";
 	private static final String DBPASSWORD = "sa";
 
@@ -46,16 +48,12 @@ public class H2DAOFactory extends DAOFactory {
 	
 	
 	@Override
-	public UserDAO getUserDAO() { return new H2UserDAO(); }
+	public PatientenDAO getPatientenDAO() { return new H2PatientenDAO(); }
 
 
 
 	@Override
-	public ExampleDAO getExampleDAO1() {
-		// TODO Auto-generated method stub
-		return new H2ExampleDAO();
-	}
-
+	public ArztDAO getArztDAO() { return new H2ArztDAO(); }
 	
 	
 }
