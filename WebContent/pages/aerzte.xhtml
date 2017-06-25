@@ -9,10 +9,17 @@
     </h:head>
     <h:body>
     
+<<<<<<< HEAD
     	<!-- <h:include src="navigation.xhtml" />-->
     
         <h3>Übersicht aller Ärzte </h3>
 		<h:dataTable var="arzt" value="#{aerzteBean.arztListe}">
+=======
+    	<h:include src="navigation.xhtml" />
+    
+        <h3>Übersicht aller Ärzte </h3>
+		<h:dataTable var="arzt" value="#{AerzteBean.arztListe}">
+>>>>>>> 0cb88fbd773dca70dbd5a27b72eb77cb06ffbfc8
 	    	<h:column>
 		    	<h:outputText value="#{arzt.personalnummer}"/>
 		    </h:column>

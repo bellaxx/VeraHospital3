@@ -1,5 +1,6 @@
 package businesslogic;
 
+<<<<<<< HEAD
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -99,3 +100,8 @@ static PatientenDAO patientenDAO;
     
 }
 
+=======
+public class PatientenManager {
+
+}
+>>>>>>> 0cb88fbd773dca70dbd5a27b72eb77cb06ffbfc8

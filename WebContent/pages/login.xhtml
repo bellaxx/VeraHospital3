@@ -9,11 +9,16 @@
     </h:head>
     <h:body>
     
+<<<<<<< HEAD
     	<!-- <h:include src="navigation.xhtml" />-->
+=======
+    	<h:include src="navigation.xhtml" />
+>>>>>>> 0cb88fbd773dca70dbd5a27b72eb77cb06ffbfc8
     
         <h3>Bitte loggen Sie sich ein</h3>
         <h:form id="login-form">
            <h:outputText value="Email:"/>
+<<<<<<< HEAD
            <h:inputText value="#{loginBean.email}" id="email"/>
            <br/>
            <h:outputText value="Passwort:"/>
@@ -23,6 +28,17 @@
            <br/>
            <div>Noch nicht registriert?</div>
            <h:commandButton id="registrierenButton" action="#{loginBean.registrieren}" value="Registrieren"/>
+=======
+           <h:inputText value="#{LoginBean.email}" id="email"/>
+           <br/>
+           <h:outputText value="Passwort:"/>
+           <h:inputSecret value="#{LoginBean.passwort}" id="password"/>
+           <br/>
+           <h:commandButton id="button" value="Login" action="#{LoginBean.login}"/>
+           <br/>
+           <div>Noch nicht registriert?</div>
+           <h:commandLink action="#{LoginBean.registrieren}" value="Registrieren"/>
+>>>>>>> 0cb88fbd773dca70dbd5a27b72eb77cb06ffbfc8
            <br/>
            
         </h:form>

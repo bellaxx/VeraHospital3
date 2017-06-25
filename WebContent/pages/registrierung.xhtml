@@ -9,11 +9,16 @@
     </h:head>
     <h:body>
     
+<<<<<<< HEAD
     	
+=======
+    	<h:include src="navigation.xhtml" />
+>>>>>>> 0cb88fbd773dca70dbd5a27b72eb77cb06ffbfc8
     
         <h3>Bitte registrieren Sie sich </h3>
         <h:form id="login-form">
          <h:outputText value="Name:"/>
+<<<<<<< HEAD
            <h:inputText value="#{registrierungBean.name}" id="name"/>
            <br/>
             <h:outputText value="Fachgebiet:"/>
@@ -32,6 +37,26 @@
            <br/>
            <div>Sind Sie schon registriert?</div>
            <h:commandLink action="#{registrierungBean.login}" value="Login"/>
+=======
+           <h:inputText value="#{RegistrierungBean.name}" id="name"/>
+           <br/>
+            <h:outputText value="Fachgebiet:"/>
+           <h:inputText value="#{RegistrierungBean.fachgebiet}" id="fachgebiet"/>
+           <br/>
+           <h:outputText value="Büro:"/>
+           <h:inputText value="#{RegistrierungBean.buero}" id="buero"/>
+           <br/>
+            <h:outputText value="Email:"/>
+           <h:inputText value="#{RegistrierungBean.email}" id="email"/>
+           <br/>
+           <h:outputText value="Passwort:"/>
+           <h:inputSecret value="#{RegistrierungBean.passwort" id="password"/>
+           <br/>
+           <h:commandButton id="button" value="Registrieren" action="#{RegistrierungBean.registrieren"/>
+           <br/>
+           <div>Sind Sie schon registriert?</div>
+           <h:commandLink action="#{RegistrierungBean.login}" value="Login"/>
+>>>>>>> 0cb88fbd773dca70dbd5a27b72eb77cb06ffbfc8
            <br/>
            
         </h:form>
