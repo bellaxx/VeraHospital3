@@ -8,12 +8,23 @@
         <title></title>
     </h:head>
     <h:body>
-        <h3>Patient Info: </h3>
+    
+    	<!-- <h:include src="navigation.xhtml" />-->
+    
+    	<!-- ID aus dem Request Objekt holen -->
+    
+     
+        
+        
 		<h:form id="update-form">
+		
+		   <h:outputText value="Name"/>
+		   <h:inputText value="#{updatePatientenBean.name}" id="name"/>
            <h:outputText value="Diagnose"/>
-           <h:inputText value="" id="diagnose"/>
+           <h:inputText value="#{updatePatientenBean.diagnose}" id="diagnose"/>
            <br/>
-           <h:commandButton id="button" value="Ändern" action=""/>
+           <h:commandButton id="button" value="Ändern" action="#{updatePatientenBean.updatePatient}"/>
            <br/>
+           </h:form>
 </h:body>
 </html>
