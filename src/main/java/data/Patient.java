@@ -48,7 +48,11 @@ public class Patient implements Serializable{
         this.behandelnderArzt = behandelnderArzt;
     }
      
+<<<<<<< HEAD
     public int getBehandelnderArzt(){
+=======
+    public int getPersonalnummer(){
+>>>>>>> 94ddea41911b574e1bb2b64627eddcf6651e47ce
         return behandelnderArzt;
     }
 }

@@ -1,5 +1,9 @@
 package businesslogic;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 94ddea41911b574e1bb2b64627eddcf6651e47ce
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,8 +56,12 @@ Arzt arzt=new Arzt();
 	
 	
 	public  Arzt find(String email) throws SQLException{
+<<<<<<< HEAD
 		// return arztDAO.findArzt(email);
 		return arzt;
+=======
+		 return arztDAO.findArzt(email);
+>>>>>>> 94ddea41911b574e1bb2b64627eddcf6651e47ce
               
     }
      
@@ -127,10 +135,16 @@ Arzt arzt=new Arzt();
 		} else
 			System.out.println("Diesen Benutzer gibt es nicht");
 	}
+<<<<<<< HEAD
 
 	
+=======
+>>>>>>> 94ddea41911b574e1bb2b64627eddcf6651e47ce
 	
      
 
     
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 94ddea41911b574e1bb2b64627eddcf6651e47ce

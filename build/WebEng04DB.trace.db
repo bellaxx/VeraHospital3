@@ -4252,6 +4252,7 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:165)
 	... 79 more
+<<<<<<< HEAD
 2017-06-23 12:05:25 database: flush
 org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:D:/git/praktikum.webeng/VeraHospital/build/WebEng04DB.mv.db [1.4.193/7]" [50000-193]
 	at org.h2.message.DbException.get(DbException.java:168)
@@ -9263,3 +9264,5 @@ Caused by: java.nio.channels.OverlappingFileLockException
 	at java.nio.channels.FileChannel.tryLock(FileChannel.java:1155)
 	at org.h2.mvstore.FileStore.open(FileStore.java:165)
 	... 79 more
+=======
+>>>>>>> 94ddea41911b574e1bb2b64627eddcf6651e47ce

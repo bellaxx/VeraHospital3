@@ -9,21 +9,40 @@
     </h:head>
     <h:body>
     
+<<<<<<< HEAD
     	<!-- <h:include src="navigation.xhtml" />-->
     
     	<!-- ID aus dem Request Objekt holen -->
     
      
         
+=======
+<<<<<<< HEAD
+    	<!-- <h:include src="navigation.xhtml" />-->
+=======
+    	<h:include src="navigation.xhtml" />
+>>>>>>> 0cb88fbd773dca70dbd5a27b72eb77cb06ffbfc8
+    
+    	<!-- ID aus dem Request Objekt holen -->
+    
+        <h3>Patient Info: </h3>
+        <h:outputText value="#{updatePatientenBean.getPatientInfo(id)}"/>
+>>>>>>> 94ddea41911b574e1bb2b64627eddcf6651e47ce
         
 		<h:form id="update-form">
 		
 		   <h:outputText value="Name"/>
 		   <h:inputText value="#{updatePatientenBean.name}" id="name"/>
            <h:outputText value="Diagnose"/>
+<<<<<<< HEAD
            <h:inputText value="#{updatePatientenBean.diagnose}" id="diagnose"/>
            <br/>
            <h:commandButton id="button" value="Ändern" action="#{updatePatientenBean.updatePatient}"/>
+=======
+           <h:inputText value="#{UpdatePatientenBean.diagnose" id="diagnose"/>
+           <br/>
+           <h:commandButton id="button" value="Ändern" action="#{UpdatePatientenBean.updatePatient(id)}"/>
+>>>>>>> 94ddea41911b574e1bb2b64627eddcf6651e47ce
            <br/>
            </h:form>
 </h:body>
